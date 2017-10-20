@@ -1,6 +1,6 @@
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
-    if (userInput = 'rock' || 'paper' || 'scissors') {
+    if (userInput = 'rock' || 'paper' || 'scissors' || 'bomb') {
         return userInput;
     } else {
         console.log("Incorrect input");
@@ -19,6 +19,9 @@ function getComputerChoice() {
 function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return "This is a tie. Replay please.";
+    }
+    if (userChoice === 'bomb') {
+        return "You always win!"
     }
     if (userChoice === 'rock') {
         if (computerChoice === 'scissors') {
@@ -43,9 +46,10 @@ function determineWinner(userChoice, computerChoice) {
     }
 };
 function playGame() {
-    var userChoice = getUserChoice('rock');
+    var userChoice = getUserChoice('bomb');
     var computerChoice = getComputerChoice();
-    console.log(userChoice, computerChoice);
+    console.log(userChoice);
+    console.log(computerChoice);
     console.log(determineWinner(userChoice, computerChoice));
 };
 playGame();
