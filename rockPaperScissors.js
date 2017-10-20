@@ -1,11 +1,11 @@
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
-    if (userInput = 'rock' || 'paper' || 'scissors' || 'bomb') {
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
         return userInput;
     } else {
         console.log("Incorrect input");
     }
-};
+}
 function getComputerChoice() {
     var a = Math.floor(Math.random() * 3);
     if (a === 0) {
@@ -15,7 +15,7 @@ function getComputerChoice() {
     } else {
         return 'scissors';
     }
-};
+}
 function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return "This is a tie. Replay please.";
@@ -44,12 +44,12 @@ function determineWinner(userChoice, computerChoice) {
             return 'Computer won!';
         }
     }
-};
+}
 function playGame() {
-    var userChoice = getUserChoice('bomb');
+    var userChoice = getUserChoice('paper');
     var computerChoice = getComputerChoice();
     console.log(userChoice);
     console.log(computerChoice);
     console.log(determineWinner(userChoice, computerChoice));
-};
+}
 playGame();
