@@ -7,10 +7,10 @@ const getUserChoice = (userInput) => {
     }
 };
 function getComputerChoice() {
-    Math.floor(Math.random() * 3);
-    if (Math.random() = 0) {
+    var a = Math.floor(Math.random() * 3);
+    if (a === 0) {
         return 'rock';
-    } else if (Math.random() = 1) {
+    } else if (a === 1) {
         return 'paper';
     } else {
         return 'scissors';
